@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOS WiFi • Starlink at Festivals</title>
+  <title>SOS WiFi • Starlink at Festivals & Events</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); body{font-family:'Inter',sans-serif;}</style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+  </style>
 </head>
-<body class="bg-zinc-950 text-white min-h-screen">
+<body class="bg-zinc-950 text-white">
 
   <div class="max-w-4xl mx-auto px-6 py-12">
     <div class="flex items-center gap-3 justify-center mb-8">
@@ -24,31 +27,31 @@
 
     <!-- Packages -->
     <div class="grid md:grid-cols-3 gap-6">
-      <!-- Economy -->
+      <!-- Basic -->
       <div class="bg-zinc-900 rounded-3xl p-8">
-        <div class="text-emerald-400 font-medium">ECONOMY</div>
+        <div class="text-emerald-400 font-medium">BASIC</div>
         <div class="text-6xl font-bold mt-2">£5</div>
         <div class="text-zinc-400">5 Mbps • 20 minutes</div>
         <ul class="mt-8 space-y-3 text-sm">
           <li>✅ Browsing & social media</li>
           <li>✅ WhatsApp, Instagram, TikTok</li>
         </ul>
-        <a href="YOUR_ECONOMY_STRIPE_LINK" target="_blank"
+        <a href="https://buy.stripe.com/fZu6oHefPg5acFYcpJ1gs01" target="_blank"
            class="mt-10 block w-full py-4 bg-white text-black text-center font-semibold rounded-2xl hover:bg-emerald-400">Pay £5 now</a>
       </div>
 
-      <!-- Gold (most popular) -->
+      <!-- Standard (most popular) -->
       <div class="bg-zinc-900 rounded-3xl p-8 ring-2 ring-emerald-400 relative">
         <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-400 text-black text-xs font-bold px-6 py-1 rounded-3xl">MOST POPULAR</div>
-        <div class="text-emerald-400 font-medium">GOLD</div>
+        <div class="text-emerald-400 font-medium">STANDARD</div>
         <div class="text-6xl font-bold mt-2">£10</div>
-        <div class="text-zinc-400">15 Mbps • 20 minutes</div>
+        <div class="text-zinc-400">10 Mbps • 20 minutes</div>
         <ul class="mt-8 space-y-3 text-sm">
           <li>✅ Streaming & video calls</li>
           <li>✅ YouTube, live streams</li>
           <li>✅ Multiple devices</li>
         </ul>
-        <a href="YOUR_GOLD_STRIPE_LINK" target="_blank"
+        <a href="https://buy.stripe.com/eVq14n3Bb6uA35o61l1gs00" target="_blank"
            class="mt-10 block w-full py-4 bg-emerald-400 text-black text-center font-semibold rounded-2xl hover:bg-white">Pay £10 now</a>
       </div>
 
@@ -61,7 +64,7 @@
           <li>✅ Ultra-fast 4K & uploads</li>
           <li>✅ Best for busy events</li>
         </ul>
-        <a href="YOUR_DELUXE_STRIPE_LINK" target="_blank"
+        <a href="https://buy.stripe.com/fZudR97Rr7yEeO6cpJ1gs02" target="_blank"
            class="mt-10 block w-full py-4 bg-white text-black text-center font-semibold rounded-2xl hover:bg-emerald-400">Pay £20 now</a>
       </div>
     </div>
@@ -69,8 +72,8 @@
     <!-- Token entry -->
     <div class="mt-12 text-center">
       <p class="text-zinc-400 mb-4">Already paid? Enter your token below</p>
-      <form action="http://192.168.8.1:2050/auth" method="get" class="flex gap-3 max-w-xs mx-auto">
-        <input type="text" name="tok" placeholder="Enter token here" 
+      <form action="#" class="flex gap-3 max-w-xs mx-auto">
+        <input type="text" placeholder="Enter token here" 
                class="flex-1 bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none">
         <button type="submit" 
                 class="bg-emerald-400 text-black px-8 font-semibold rounded-2xl">Connect</button>
