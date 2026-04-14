@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>You're connected</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Keep everything inline to avoid blocked assets -->
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .card {
+      max-width: 420px;
+      padding: 32px;
+      background: #020617;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 1.8rem;
+    }
+
+    p {
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+    .success {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="success">✅</div>
+    <h1>You’re online</h1>
+
+    <p>
+      Your payment was successful and Wi‑Fi access is now active.
+    </p>
+
+    <p>
+      You can close this page and open any website or app to get started.
+    </p>
+
+    <div class="hint">
+      If the connection doesn’t work immediately, try opening a new tab or refreshing once.
+    </div>
+  </div>
+
+</body>
+</html>
+``
