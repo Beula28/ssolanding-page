@@ -1,83 +1,228 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOS WiFi • Starlink at Festivals</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap'); body{font-family:'Inter',sans-serif;}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SOS WiFi – Your Internet Lifeline</title>
+
+  <style>
+    :root {
+      --sos-orange: #F57C2A;
+      --signal-blue: #1FA3E0;
+      --bg-dark: grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));      --bg-dark: #1F2A33;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 10px;
+      padding: 24px;
+      text-align: left;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: var(--sos-orange);
+    }
+
+    .details {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 12px 16px;
+      background: var(--signal-blue);
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      width: 100%;
+      cursor: pointer;
+      border: none;
+    }
+
+    .cta:hover {
+      background: #2bb4f2;
+    }
+
+    .featured {
+      border: 2px solid var(--signal-blue);
+      box-shadow: 0 0 0 1px rgba(31,163,224,0.2);
+    }
+
+    /* How it works */
+    .how {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .step {
+      background: var(--bg-card);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .step span {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--signal-blue);
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+  </style>
 </head>
-<body class="bg-zinc-950 text-white min-h-screen">
 
-  <div class="max-w-4xl mx-auto px-6 py-12">
-    <div class="flex items-center gap-3 justify-center mb-8">
-      <i class="fa-solid fa-wifi text-4xl text-emerald-400"></i>
-      <h1 class="text-4xl font-bold">SOS WiFi</h1>
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header>
+      <!-- Replace with your actual logo -->
+      <img src="/logo.png" alt="SOS WiFi logo"/>
+      <div>
+        <h1>Your Internet Lifeline</h1>
+        <p>Emergency Wi‑Fi when mobile signal fails</p>
+        <p>Secure. Fast. Pay only for what you need.</p>
+      </div>
+    </header>
+
+    <!-- TRUST STRIP -->
+    <div class="trust">
+      🔒 Secure payment via Stripe • No browsing snooping • No data resale
     </div>
 
-    <div class="text-center mb-10">
-      <div class="inline-flex bg-emerald-400 text-black px-5 py-2 rounded-3xl text-sm font-bold mb-4">POWERED BY STARLINK</div>
-      <h2 class="text-5xl font-bold tracking-tighter">20 minutes of fast WiFi</h2>
-      <p class="text-zinc-400 mt-3">When cellular is dead at festivals & events</p>
-    </div>
+    <!-- PACKAGES -->
+    <section class="packages">
 
-    <!-- Packages -->
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Economy -->
-      <div class="bg-zinc-900 rounded-3xl p-8">
-        <div class="text-emerald-400 font-medium">ECONOMY</div>
-        <div class="text-6xl font-bold mt-2">£5</div>
-        <div class="text-zinc-400">5 Mbps • 20 minutes</div>
-        <ul class="mt-8 space-y-3 text-sm">
-          <li>✅ Browsing & social media</li>
-          <li>✅ WhatsApp, Instagram, TikTok</li>
-        </ul>
-        <a href="YOUR_ECONOMY_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-white text-black text-center font-semibold rounded-2xl hover:bg-emerald-400">Pay £5 now</a>
+      <div class="card">
+        <h2>Economy</h2>
+        <div class="price">£5</div>
+        <div class="details">5 Mbps • 20 minutes<br/>Browsing & messaging</div>
+        <button class="cta" onclick="startCheckout('economy')">Get connected</button>
       </div>
 
-      <!-- Gold (most popular) -->
-      <div class="bg-zinc-900 rounded-3xl p-8 ring-2 ring-emerald-400 relative">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-400 text-black text-xs font-bold px-6 py-1 rounded-3xl">MOST POPULAR</div>
-        <div class="text-emerald-400 font-medium">GOLD</div>
-        <div class="text-6xl font-bold mt-2">£10</div>
-        <div class="text-zinc-400">15 Mbps • 20 minutes</div>
-        <ul class="mt-8 space-y-3 text-sm">
-          <li>✅ Streaming & video calls</li>
-          <li>✅ YouTube, live streams</li>
-          <li>✅ Multiple devices</li>
-        </ul>
-        <a href="YOUR_GOLD_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-emerald-400 text-black text-center font-semibold rounded-2xl hover:bg-white">Pay £10 now</a>
+      <div class="card featured">
+        <h2>⭐ Gold (Most Popular)</h2>
+        <div class="price">£10</div>
+        <div class="details">15 Mbps • 20 minutes<br/>Streaming & video calls</div>
+        <button class="cta" onclick="startCheckout('gold')">Get connected</button>
+      </div   <h2>Deluxe</h2>
+        <div class="price">£20</div>
+        <div class="details">25 Mbps • 20 minutes<br/>Ultra‑fast access</div>
+        <button class="cta" onclick="startCheckout('deluxe')">Get connected</button>
       </div>
 
-      <!-- Deluxe -->
-      <div class="bg-zinc-900 rounded-3xl p-8">
-        <div class="text-emerald-400 font-medium">DELUXE</div>
-        <div class="text-6xl font-bold mt-2">£20</div>
-        <div class="text-zinc-400">25 Mbps • 20 minutes</div>
-        <ul class="mt-8 space-y-3 text-sm">
-          <li>✅ Ultra-fast 4K & uploads</li>
-          <li>✅ Best for busy events</li>
-        </ul>
-        <a href="YOUR_DELUXE_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-white text-black text-center font-semibold rounded-2xl hover:bg-emerald-400">Pay £20 now</a>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how">
+      <div class="step">
+        <span>1</span>
+        Connect to SOS WiFi
       </div>
-    </div>
+      <div class="step">
+        <span>2</span>
+        Choose a package
+      </div>
+      <div class="step">
+        <span>3</span>
+        Get online instantly
+      </div>
+    </section>
 
-    <!-- Token entry -->
-    <div class="mt-12 text-center">
-      <p class="text-zinc-400 mb-4">Already paid? Enter your token below</p>
-      <form action="http://192.168.8.1:2050/auth" method="get" class="flex gap-3 max-w-xs mx-auto">
-        <input type="text" name="tok" placeholder="Enter token here" 
-               class="flex-1 bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-white focus:outline-none">
-        <button type="submit" 
-                class="bg-emerald-400 text-black px-8 font-semibold rounded-2xl">Connect</button>
-      </form>
-    </div>
+    <!-- FOOTER -->
+    <footer>
+      Powered by Starlink • Designed for festivals & public events<br/>
+      SOS WiFi — Your Internet Lifeline
+    </footer>
 
-    <p class="text-center text-xs text-zinc-500 mt-12">© SOS WiFi • Powered by Starlink on GL.iNet AXT1800</p>
   </div>
+
+  <!-- Placeholder JS -->
+  <script>
+    function startCheckout(packageName) {
+      alert(
+        "Stripe checkout would start here for package: " +
+        packageName.toUpperCase()
+      );
+    }
+  </script>
+
 </body>
 </html>
+      --bg-card: #162029;
+      --text-main: #EAF2F7;
+      --text-muted: #9FB3C8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 32px 20px 48px;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    header img {
+      height: 56px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 4px 0 0;
+      color: var(--text-muted);
+    }
+
+    /* Trust strip */
+    .trust {
+      background: #162029;
+      border-left: 4px solid var(--signal-blue);
+      padding: 12px 16px;
+      margin: 24px 0 32px;
+      font-size: 0.95rem;
+    }
+
+    /* Packages */
+    .packages {
+      display: grid;
