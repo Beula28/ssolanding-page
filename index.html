@@ -1,12 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SOS WiFi • Starlink at Festivals</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />  <meta charset="UTF-8" />
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
@@ -34,9 +29,10 @@
     <div class="grid md:grid-cols-3 gap-6">
 
       <!-- Economy -->
-      <div class="bg-zinc-900/90 rounded-3xl p-8 ring-2 [#FF6A1A] border border-zinc-800 relative
+      <div class="bg-zinc-900/90 rounded-3xl p-8
+                  border border-zinc-800 ring-2 ring-[#FF6A1A]/40
                   transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:border-white/25 hover:shadow-lg hover:shadow-black/30">
+                  hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
         <div class="text-[#FF6A1A] font-medium">ECONOMY</div>
         <div class="text-6xl font-bold mt-2">£5</div>
         <div class="text-zinc-400">5 Mbps • 20 minutes</div>
@@ -46,8 +42,11 @@
           <li>✅ WhatsApp, Instagram, TikTok</li>
         </ul>
 
-        <!-- keep your placeholder exactly as you use it -->
-        YOUR_ECONOMY_STRIPE_LINK
+        <a href="YOUR_ECONOMY_STRIPE_LINK" target="_blank"
+           class="mt-10 block w-full py-4 bg-white text-black text-center font-semibold rounded-2xl
+                  transition-all duration-200 ease-out
+                  hover:-translate-y-0.5 hover:bg-zinc-100 hover:shadow-lg hover:shadow-black/30
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
           Pay £5 now
         </a>
 
@@ -58,7 +57,8 @@
       </div>
 
       <!-- Gold (most popular) -->
-      <div class="bg-zinc-900/90 rounded-3xl p-8 ring-2 [#FF6A1A] border border-zinc-800 relative
+      <div class="bg-zinc-900/90 rounded-3xl p-8
+                  ring-2 ring-[#FF6A1A] border border-zinc-800 relative
                   transition-all duration-200 ease-out
                   hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#FF6A1A]/10">
         <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF6A1A] text-black text-xs font-bold px-6 py-1 rounded-3xl">
@@ -75,7 +75,12 @@
           <li>✅ Multiple devices</li>
         </ul>
 
-        YOUR_GOLD_STRIPE_LINK
+        <a href="YOUR_GOLD_STRIPE_LINK" target="_blank"
+           class="mt-10 block w-full py-4 bg-[#FF6A1A] text-black text-center font-semibold rounded-2xl
+                  transition-all duration-200 ease-out
+                  hover:-translate-y-0.5 hover:bg-[#ff7426] hover:shadow-xl hover:shadow-[#FF6A1A]/20
+                  active:translate-y-0
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
           Pay £10 now
         </a>
 
@@ -86,9 +91,10 @@
       </div>
 
       <!-- Deluxe -->
-      <div class="bg-zinc-900/90 rounded-3xl p-8 ring-2 [#FF6A1A] border border-zinc-800 relative
+      <div class="bg-zinc-900/90 rounded-3xl p-8
+                  border border-zinc-800 ring-2 ring-[#FF6A1A]/40
                   transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:border-white/25 hover:shadow-lg hover:shadow-black/30">
+                  hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
         <div class="text-[#FF6A1A] font-medium">DELUXE</div>
         <div class="text-6xl font-bold mt-2">£20</div>
         <div class="text-zinc-400">25 Mbps • 20 minutes</div>
@@ -98,7 +104,11 @@
           <li>✅ Best for busy events</li>
         </ul>
 
-        YOUR_DELUXE_STRIPE_LINK
+        <a href="YOUR_DELUXE_STRIPE_LINK" target="_blank"
+           class="mt-10 block w-full py-4 bg-white text-black text-center font-semibold rounded-2xl
+                  transition-all duration-200 ease-out
+                  hover:-translate-y-0.5 hover:bg-zinc-100 hover:shadow-lg hover:shadow-black/30
+                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
           Pay £20 now
         </a>
 
@@ -112,32 +122,8 @@
 
     <!-- Trust strip -->
     <div class="mt-10 grid md:grid-cols-3 gap-4 text-sm text-zinc-400">
-      <div class="flex items-center gap-3 bg-zinc-900/50 border border-zinc-800 rounded-2xl p-4">
-        <i class="fa-solid fa-bolt text-[#FF6A1A]"></i>
-        <span>Pay and get online straight away.</span>
-      </div>
-      <div class="flex items-center gap-3 bg-zinc-900/50 border border-zinc-800 rounded-2xl p-4">
-        <i class="fa-solid fa-clock text-[#FF6A1A]"></i>
-        <span>Auto-expires after 20 minutes (no surprises).</span>
-      </div>
-      <div class="flex items-center gap-3 bg-zinc-900/50 border border-zinc-800 rounded-2xl p-4">
-        <i class="fa-solid fa-lock text-[#FF6A1A]"></i>
-        <span>Payments handled via Stripe checkout.</span>
-      </div>
-    </div>
-
-    <!-- Token entry -->
-    <div class="mt-12 text-center">
-      <p class="text-zinc-400 mb-4">Already paid? Enter your token below</p>
-
-      <form action="http://192.168.8.1:2050/auth" method="get" class="flex gap-3 max-w-xs mx-auto">
-        <input type="text" name="tok" placeholder="Enter token here"
-               class="flex-1 bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-white
-                      focus:outline-none focus:ring-2 focus:ring-[#FF6A1A]/60 focus:border-transparent" />
-        <button type="submit"
-                class="bg-[#FF6A1A] text-black px-8 font-semibold rounded-2xl
-                       transition-all duration-200 ease-out
-                       hover:-translate-y-0.5 hover:bg-[#ff7426] hover:shadow-xl hover:shadow-[#FF6A1A]/20
+      <div class="flex items-center gap-3 bg-zinc-900/50 rounded-2xl p-4
+                  border border-zinc-over:shadow-[#FF6A1A]/20
                        active:translate-y-0
                        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
           Connect
@@ -152,3 +138,7 @@
   </div>
 </body>
 </html>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOS WiFi • Starlink at Festivals</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
