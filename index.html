@@ -6,7 +6,7 @@
   <title>SOS WiFi • Starlink at Festivals</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
@@ -34,9 +34,9 @@
     <div class="grid md:grid-cols-3 gap-6">
 
       <!-- Economy -->
-      <div class="bg-zinc-900/90 rounded-3xl p-8 border border-zinc-800
+      <div class="bg-zinc-900/90 rounded-3xl p-8 border border-white/15 ring-1 ring-white/5
                   transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:border-zinc-700 hover:shadow-lg hover:shadow-black/30">
+                  hover:-translate-y-0.5 hover:border-white/25 hover:shadow-lg hover:shadow-black/30">
         <div class="text-[#FF6A1A] font-medium">ECONOMY</div>
         <div class="text-6xl font-bold mt-2">£5</div>
         <div class="text-zinc-400">5 Mbps • 20 minutes</div>
@@ -46,6 +46,7 @@
           <li>✅ WhatsApp, Instagram, TikTok</li>
         </ul>
 
+        <!-- keep your placeholder exactly as you use it -->
         YOUR_ECONOMY_STRIPE_LINK
           Pay £5 now
         </a>
@@ -85,9 +86,9 @@
       </div>
 
       <!-- Deluxe -->
-      <div class="bg-zinc-900/90 rounded-3xl p-8 border border-zinc-800
+      <div class="bg-zinc-900/90 rounded-3xl p-8 border border-white/15 ring-1 ring-white/5
                   transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:border-zinc-700 hover:shadow-lg hover:shadow-black/30">
+                  hover:-translate-y-0.5 hover:border-white/25 hover:shadow-lg hover:shadow-black/30">
         <div class="text-[#FF6A1A] font-medium">DELUXE</div>
         <div class="text-6xl font-bold mt-2">£20</div>
         <div class="text-zinc-400">25 Mbps • 20 minutes</div>
@@ -129,7 +130,7 @@
     <div class="mt-12 text-center">
       <p class="text-zinc-400 mb-4">Already paid? Enter your token below</p>
 
-      http://192.168.8.1:2050/auth
+      <form action="http://192.168.8.1:2050/auth" method="get" class="flex gap-3 max-w-xs mx-auto">
         <input type="text" name="tok" placeholder="Enter token here"
                class="flex-1 bg-zinc-900 border border-zinc-700 rounded-2xl px-5 py-4 text-white
                       focus:outline-none focus:ring-2 focus:ring-[#FF6A1A]/60 focus:border-transparent" />
