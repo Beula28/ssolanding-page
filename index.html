@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SOS WiFi • Internet Lifeline</title>
   
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -16,157 +13,126 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(
-        ellipse at center,
-        #2c343d 0%,
-        #232a31 40%,
-        #1a2027 70%,
-        #11171e 100%
-      );
+      background: radial-gradient(ellipse at center, #2c343d 0%, #232a31 45%, #1a2027 75%, #11171e 100%);
       background-attachment: fixed;
     }
 
-    .orange-glow {
-      text-shadow: 0 0 20px rgba(255, 106, 26, 0.5);
-    }
+    .orange-glow { text-shadow: 0 0 15px rgba(255, 106, 26, 0.4); }
 
     .card {
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
     }
-    
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 25px 50px -12px rgb(255 106 26 / 0.15);
-    }
-
-    .premium-ring {
-      box-shadow: 0 0 0 1px rgba(255, 106, 26, 0.3) inset;
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgb(255 106 26 / 0.15);
     }
   </style>
 </head>
 
-<body class="text-white min-h-screen">
-  <div class="max-w-4xl mx-auto px-6 py-16 relative z-10">
+<body class="text-white min-h-screen pb-12">
+  <div class="max-w-md mx-auto px-5 py-10">
 
     <!-- Logo -->
-    <div class="flex justify-center mb-6">
-      <img src="SOS-Wi-Fi-png.png" alt="SOS WiFi Logo" class="h-28 sm:h-32 md:h-36 w-auto drop-shadow-2xl">
+    <div class="flex justify-center mb-8">
+      <img src="SOS-Wi-Fi-png.png" alt="SOS WiFi Logo" class="h-24 w-auto drop-shadow-2xl">
     </div>
 
     <!-- Hero -->
-    <div class="text-center mb-16">
-      <p class="text-[#FF6A1A] font-semibold tracking-widest text-lg mb-3">
+    <div class="text-center mb-12">
+      <p class="text-[#FF6A1A] font-semibold tracking-[2px] text-base mb-2">
         YOUR INTERNET LIFELINE
       </p>
       
-      <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-6 leading-none">
+      <h1 class="text-5xl font-bold tracking-tighter leading-none mb-6">
         20 minutes of<br>fast WiFi
       </h1>
 
-      <div class="inline-flex items-center gap-2 bg-[#FF6A1A] text-black px-8 py-3 rounded-3xl text-sm font-bold uppercase tracking-wider shadow-lg shadow-orange-500/30">
-        <span>POWERED BY SUNSHINE</span>
+      <div class="inline-flex bg-[#FF6A1A] text-black px-6 py-2.5 rounded-3xl text-sm font-bold shadow-md">
+        POWERED BY SUNSHINE
       </div>
     </div>
 
     <!-- Pricing Cards -->
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="space-y-6">
 
       <!-- Economy -->
-      <div class="card bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-8 border border-zinc-700 ring-1 ring-[#FF6A1A]/30 hover:ring-[#FF6A1A]/60">
-        <div class="text-[#FF6A1A] font-semibold tracking-widest text-sm mb-1">ECONOMY</div>
-        <div class="text-7xl font-bold text-white mt-1 mb-1">£5</div>
-        <div class="text-zinc-400 text-lg">5 Mbps • 20 minutes</div>
+      <div class="card bg-zinc-900/95 backdrop-blur rounded-3xl p-6 border border-zinc-700 ring-1 ring-[#FF6A1A]/30">
+        <div class="flex justify-between items-start">
+          <div>
+            <div class="text-[#FF6A1A] font-semibold text-sm tracking-widest">ECONOMY</div>
+            <div class="text-6xl font-bold mt-1">£5</div>
+          </div>
+          <div class="text-right text-zinc-400 text-sm leading-tight">
+            5 Mbps<br>20 minutes
+          </div>
+        </div>
 
-        <ul class="mt-10 space-y-4 text-zinc-300 text-[15px]">
-          <li class="flex items-start gap-3">
-            <span class="text-[#FF6A1A] mt-1">✔</span>
-            Browsing & social media
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-[#FF6A1A] mt-1">✔</span>
-            WhatsApp, Instagram, TikTok
-          </li>
+        <ul class="mt-8 space-y-3 text-zinc-300 text-[15px]">
+          <li class="flex gap-3"><span class="text-[#FF6A1A]">✔</span> Browsing & social media</li>
+          <li class="flex gap-3"><span class="text-[#FF6A1A]">✔</span> WhatsApp, Instagram, TikTok</li>
         </ul>
 
         <a href="YOUR_ECONOMY_STRIPE_LINK" target="_blank"
-           class="mt-12 block w-full py-4 bg-white hover:bg-zinc-100 text-black font-semibold rounded-2xl transition-all text-center">
+           class="mt-10 block w-full py-4 bg-white text-black font-semibold rounded-2xl text-center active:scale-95 transition">
           Pay £5 now
         </a>
-
-        <p class="mt-4 text-xs text-zinc-500 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-lock"></i>
-          Secure checkout via Stripe
-        </p>
       </div>
 
       <!-- Gold - Most Popular -->
-      <div class="card bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-8 border border-[#FF6A1A] ring-2 ring-[#FF6A1A] relative premium-ring hover:ring-[#FF6A1A]/90">
-        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#FF6A1A] text-black text-xs font-bold px-8 py-1.5 rounded-3xl shadow-lg shadow-orange-600/50">
+      <div class="card bg-zinc-900/95 backdrop-blur rounded-3xl p-6 border border-[#FF6A1A] ring-2 ring-[#FF6A1A] relative">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF6A1A] text-black text-xs font-bold px-6 py-1 rounded-3xl shadow">
           MOST POPULAR
         </div>
 
-        <div class="text-[#FF6A1A] font-semibold tracking-widest text-sm mb-1">GOLD</div>
-        <div class="text-7xl font-bold text-white mt-1 mb-1">£10</div>
-        <div class="text-zinc-400 text-lg">15 Mbps • 20 minutes</div>
+        <div class="flex justify-between items-start">
+          <div>
+            <div class="text-[#FF6A1A] font-semibold text-sm tracking-widest">GOLD</div>
+            <div class="text-6xl font-bold mt-1">£10</div>
+          </div>
+          <div class="text-right text-zinc-400 text-sm leading-tight">
+            15 Mbps<br>20 minutes
+          </div>
+        </div>
 
-        <ul class="mt-10 space-y-4 text-zinc-300 text-[15px]">
-          <li class="flex items-start gap-3">
-            <span class="text-[#FF6A1A] mt-1">✔</span>
-            Streaming & video calls
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-[#FF6A1A] mt-1">✔</span>
-            YouTube, live streams
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-[#FF6A1A] mt-1">✔</span>
-            Multiple devices
-          </li>
+        <ul class="mt-8 space-y-3 text-zinc-300 text-[15px]">
+          <li class="flex gap-3"><span class="text-[#FF6A1A]">✔</span> Streaming & video calls</li>
+          <li class="flex gap-3"><span class="text-[#FF6A1A]">✔</span> YouTube, live streams</li>
+          <li class="flex gap-3"><span class="text-[#FF6A1A]">✔</span> Multiple devices</li>
         </ul>
 
         <a href="YOUR_GOLD_STRIPE_LINK" target="_blank"
-           class="mt-12 block w-full py-4 bg-[#FF6A1A] hover:bg-[#ff7f2e] text-black font-semibold rounded-2xl transition-all text-center shadow-lg shadow-orange-500/40">
+           class="mt-10 block w-full py-4 bg-[#FF6A1A] hover:bg-[#ff7f2e] text-black font-semibold rounded-2xl text-center shadow shadow-orange-500/30 active:scale-95 transition">
           Pay £10 now
         </a>
-
-        <p class="mt-4 text-xs text-zinc-500 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-lock"></i>
-          Secure checkout via Stripe
-        </p>
       </div>
 
       <!-- Deluxe -->
-      <div class="card bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-8 border border-zinc-700 ring-1 ring-[#FF6A1A]/30 hover:ring-[#FF6A1A]/60">
-        <div class="text-[#FF6A1A] font-semibold tracking-widest text-sm mb-1">DELUXE</div>
-        <div class="text-7xl font-bold text-white mt-1 mb-1">£20</div>
-        <div class="text-zinc-400 text-lg">25 Mbps • 20 minutes</div>
+      <div class="card bg-zinc-900/95 backdrop-blur rounded-3xl p-6 border border-zinc-700 ring-1 ring-[#FF6A1A]/30">
+        <div class="flex justify-between items-start">
+          <div>
+            <div class="text-[#FF6A1A] font-semibold text-sm tracking-widest">DELUXE</div>
+            <div class="text-6xl font-bold mt-1">£20</div>
+          </div>
+          <div class="text-right text-zinc-400 text-sm leading-tight">
+            25 Mbps<br>20 minutes
+          </div>
+        </div>
 
-        <ul class="mt-10 space-y-4 text-zinc-300 text-[15px]">
-          <li class="flex items-start gap-3">
-            <span class="text-[#FF6A1A] mt-1">✔</span>
-            Ultra-fast 4K & uploads
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-[#FF6A1A] mt-1">✔</span>
-            Best for busy events
-          </li>
+        <ul class="mt-8 space-y-3 text-zinc-300 text-[15px]">
+          <li class="flex gap-3"><span class="text-[#FF6A1A]">✔</span> Ultra-fast 4K & uploads</li>
+          <li class="flex gap-3"><span class="text-[#FF6A1A]">✔</span> Best for busy events</li>
         </ul>
 
         <a href="YOUR_DELUXE_STRIPE_LINK" target="_blank"
-           class="mt-12 block w-full py-4 bg-white hover:bg-zinc-100 text-black font-semibold rounded-2xl transition-all text-center">
+           class="mt-10 block w-full py-4 bg-white text-black font-semibold rounded-2xl text-center active:scale-95 transition">
           Pay £20 now
         </a>
-
-        <p class="mt-4 text-xs text-zinc-500 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-lock"></i>
-          Secure checkout via Stripe
-        </p>
       </div>
 
     </div>
 
     <!-- Footer -->
-    <p class="text-center text-zinc-500 text-xs mt-16">
+    <p class="text-center text-zinc-500 text-xs mt-12">
       © SOS WiFi • Powered By 100% Renewable Energy
     </p>
 
