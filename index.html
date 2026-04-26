@@ -1,137 +1,222 @@
-<!doctype html>
+!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />  <meta charset="UTF-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOS Wi‑Fi – Your Internet Lifeline</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-    body { font-family: 'Inter', sans-serif; }
+    /* =========================
+       Base + background
+       ========================= */
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: #ffffff;
+
+      background: radial-gradient(
+        ellipse at center,
+        #3a424b 0%,
+        #2f363e 40%,
+        #232a31 70%,
+        #151a1f 100%
+      );
+
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.05) 20%,
+        rgba(0, 0, 0, 0.05) 80%,
+        rgba(0, 0, 0, 0.35)
+      );
+    }
+
+    /* =========================
+       Layout
+       ========================= */
+
+    .page {
+      width: 100%;
+      max-width: 1100px;
+      padding: 48px 24px 80px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header img {
+      max-width: 320px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: 0.3px;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 1.05rem;
+      color: #d6dbe0;
+    }
+
+    /* =========================
+       Cards
+       ========================= */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 28px 26px 30px;
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .card h3 {
+      margin: 0 0 12px 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: #cfd5da;
+    }
+
+    /* =========================
+       CTA
+       ========================= */
+
+    .cta {
+      margin-top: 56px;
+      text-align: center;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 10px;
+      background: #ff7a18;
+      color: #000000;
+      font-weight: 600;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      box-shadow:
+        0 8px 20px rgba(255, 122, 24, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    .cta a:hover {
+      filter: brightness(1.05);
+    }
+
+    .cta p {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #b9c0c6;
+    }
+
+    /* =========================
+       Footer
+       ========================= */
+
+    footer {
+      margin-top: 72px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #9aa2a9;
+    }
+
+    footer span {
+      margin: 0 8px;
+    }
   </style>
 </head>
 
-<body class="text-white min-h-screen bg-gradient-to-b from-black via-zinc-950 to-black">
-  <div class="max-w-4xl mx-auto px-6 py-12">
-<div class="flex justify-center mb-10">
-  <img
-    src="SOS-Wi-Fi-png.png"
-    alt="SOS Wi‑Fi Logo"
-    class="h-24 sm:h-28 md:h-32 w-auto"
-    loading="eager"
-  />
-</div>
-    <div class="text-center mb-10">
-      <div class="inline-flex bg-[#FF6A1A] text-black px-5 py-2 rounded-3xl text-sm font-bold mb-4">
-        POWERED BY SUNSHINE
+<body>
+  <div class="page">
+
+    <header>
+      <img src="/SOS-Wi-Fi-png.png" alt="SOS Wi‑Fi logo">
+      <h1>Your Internet Lifeline</h1>
+      <p>Fast, reliable emergency Wi‑Fi when mobile networks let you down.</p>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Instant Connectivity</h3>
+        <p>
+          Satellite‑backed Wi‑Fi for events, emergencies and locations
+          where 4G and 5G struggle or collapse under load.
+        </p>
       </div>
-      <h2 class="text-5xl font-bold tracking-tighter">20 minutes of WiFi</h2>
-      <p class="text-zinc-400 mt-3">Your Internet Lifeline</p>
+
+      <div class="card">
+        <h3>Simple, Pay‑As‑You‑Go</h3>
+        <p>
+          No apps. No accounts. Connect, pay securely,
+          and get online in seconds.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Built for Pressure</h3>
+        <p>
+          Designed to work when it matters most — resilient hardware,
+          controlled access and predictable performance.
+        </p>
+      </div>
+    </section>
+
+    <div class="cta">
+      <a href="#">Connect to SOS Wi‑Fi</a>
+      <p>Secure payment via Stripe • No personal data stored</p>
     </div>
 
-    <!-- Packages -->
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <!-- Economy -->
-      <div class="bg-zinc-900/90 rounded-3xl p-8
-                  border border-zinc-800 ring-2 ring-[#FF6A1A]/40
-                  transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
-        <div class="text-[#FF6A1A] font-medium">ECONOMY</div>
-        <div class="text-6xl font-bold mt-2">£5</div>
-        <div class="text-zinc-400">5 Mbps • 20 minutes</div>
-
-        <ul class="mt-8 space-y-3 text-sm">
-          <li>✅ Browsing &amp; social media</li>
-          <li>✅ WhatsApp, Instagram, TikTok</li>
-        </ul>
-
-        <a href="YOUR_ECONOMY_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-white text-black text-center font-semibold rounded-2xl
-                  transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:bg-zinc-100 hover:shadow-lg hover:shadow-black/30
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
-          Pay £5 now
-        </a>
-
-        <p class="mt-3 text-xs text-zinc-500 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-lock"></i>
-          You’ll be taken to Stripe’s checkout to pay.
-        </p>
-      </div>
-
-      <!-- Gold (most popular) -->
-      <div class="bg-zinc-900/90 rounded-3xl p-8
-                  ring-2 ring-[#FF6A1A] border border-zinc-800 relative
-                  transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[#FF6A1A]/10">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF6A1A] text-black text-xs font-bold px-6 py-1 rounded-3xl">
-          MOST POPULAR
-        </div>
-
-        <div class="text-[#FF6A1A] font-medium">GOLD</div>
-        <div class="text-6xl font-bold mt-2">£10</div>
-        <div class="text-zinc-400">15 Mbps • 20 minutes</div>
-
-        <ul class="mt-8 space-y-3 text-sm">
-          <li>✅ Streaming &amp; video calls</li>
-          <li>✅ YouTube, live streams</li>
-          <li>✅ Multiple devices</li>
-        </ul>
-
-        <a href="YOUR_GOLD_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-[#FF6A1A] text-black text-center font-semibold rounded-2xl
-                  transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:bg-[#ff7426] hover:shadow-xl hover:shadow-[#FF6A1A]/20
-                  active:translate-y-0
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
-          Pay £10 now
-        </a>
-
-        <p class="mt-3 text-xs text-zinc-500 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-lock"></i>
-          You’ll be taken to Stripe’s checkout to pay.
-        </p>
-      </div>
-
-      <!-- Deluxe -->
-      <div class="bg-zinc-900/90 rounded-3xl p-8
-                  border border-zinc-800 ring-2 ring-[#FF6A1A]/40
-                  transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/30">
-        <div class="text-[#FF6A1A] font-medium">DELUXE</div>
-        <div class="text-6xl font-bold mt-2">£20</div>
-        <div class="text-zinc-400">25 Mbps • 20 minutes</div>
-
-        <ul class="mt-8 space-y-3 text-sm">
-          <li>✅ Ultra-fast 4K &amp; uploads</li>
-          <li>✅ Best for busy events</li>
-        </ul>
-
-        <a href="YOUR_DELUXE_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-white text-black text-center font-semibold rounded-2xl
-                  transition-all duration-200 ease-out
-                  hover:-translate-y-0.5 hover:bg-zinc-100 hover:shadow-lg hover:shadow-black/30
-                  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF6A1A] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950">
-          Pay £20 now
-        </a>
-
-        <p class="mt-3 text-xs text-zinc-500 flex items-center justify-center gap-2">
-          <i class="fa-solid fa-lock"></i>
-          You’ll be taken to Stripe’s checkout to pay.
-        </p>
-      </div>
-
-    </div>
-
-    <!-- Trust strip -->
-    <div class="mt-10 grid md:grid-cols-3 gap-4 text-sm text-zinc-400">
-      <p class="text-center text-xs text-zinc-500 mt-12">
-      © SOS WiFi • Powered By 100% Renewable Energy
-    </p>
+    <footer>
+      <span>Secure connection</span> |
+      <span>Stripe payments</span> |
+      <span>No tracking</span>
+    </footer>
 
   </div>
 </body>
 </html>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SOS WiFi • Internet Access</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
