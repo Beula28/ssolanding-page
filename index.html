@@ -17,93 +17,94 @@
       background-attachment: fixed;
     }
 
-    .hero-text {
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    .lifeline {
+      color: #FF6A1A;
+      text-shadow: 0 0 20px rgba(255, 106, 26, 0.6);
     }
   </style>
 </head>
 
 <body class="text-white min-h-screen">
-  <div class="max-w-lg mx-auto px-5 pt-8 pb-12">
+  <div class="max-w-lg mx-auto px-5 pt-6 pb-12">
 
     <!-- Logo -->
     <div class="flex justify-center mb-6">
       <img src="SOS-Wi-Fi-png.png" alt="SOS WiFi Logo" class="h-20 w-auto drop-shadow-2xl">
     </div>
 
-    <!-- Hero - Tighter & Stronger -->
+    <!-- Hero -->
     <div class="text-center mb-10">
-      <p class="text-[#FF6A1A] font-semibold tracking-widest text-lg mb-1">
+      <p class="lifeline font-semibold tracking-[3px] text-xl mb-3">
         YOUR INTERNET LIFELINE
       </p>
       
-      <h1 class="text-4xl sm:text-5xl font-bold tracking-tighter leading-none hero-text mb-4">
+      <h1 class="text-5xl font-bold tracking-tighter leading-none mb-6">
         20 minutes of<br>fast WiFi
       </h1>
 
-      <div class="inline-flex bg-[#FF6A1A] text-black px-7 py-2.5 rounded-3xl text-sm font-bold shadow-lg shadow-orange-900/50">
-        POWERED BY SUNSHINE
+      <div class="inline-flex items-center gap-2 text-zinc-400 text-sm font-medium">
+        <span class="text-lg">☀️</span>
+        Powered by Sunshine (Starlink)
       </div>
     </div>
 
-    <!-- Gold Card - Prominent First -->
-    <div class="mb-8">
-      <div class="relative bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-7 border border-[#FF6A1A] ring-2 ring-[#FF6A1A]">
-        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF6A1A] text-black text-xs font-bold px-8 py-1 rounded-3xl shadow-lg">
+    <!-- Gold Card - First & Prominent -->
+    <div class="mb-10">
+      <div class="relative bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-7 border-2 border-[#FF6A1A] ring-2 ring-[#FF6A1A]/50">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#FF6A1A] text-black text-xs font-bold px-8 py-1.5 rounded-3xl shadow-xl">
           MOST POPULAR
         </div>
 
         <div class="flex justify-between items-start mb-6">
           <div>
-            <div class="text-[#FF6A1A] font-semibold tracking-widest">GOLD</div>
+            <div class="text-[#FF6A1A] font-semibold tracking-widest text-sm">GOLD</div>
             <div class="text-6xl font-bold mt-1">£10</div>
           </div>
-          <div class="text-right text-zinc-400">
-            15 Mbps<br><span class="text-sm">20 minutes</span>
+          <div class="text-right text-zinc-400 text-sm leading-tight">
+            15 Mbps<br>20 minutes
           </div>
         </div>
 
-        <ul class="space-y-3 text-zinc-200 mb-8">
+        <ul class="space-y-3 text-zinc-200 mb-8 text-[15px]">
           <li class="flex items-center gap-3"><span class="text-[#FF6A1A]">✔</span> Streaming & video calls</li>
           <li class="flex items-center gap-3"><span class="text-[#FF6A1A]">✔</span> YouTube, live streams</li>
           <li class="flex items-center gap-3"><span class="text-[#FF6A1A]">✔</span> Multiple devices</li>
         </ul>
 
         <a href="YOUR_GOLD_STRIPE_LINK" target="_blank"
-           class="block w-full py-4 bg-[#FF6A1A] hover:bg-orange-500 text-black font-semibold rounded-2xl text-center text-lg shadow-lg active:scale-[0.98] transition">
+           class="block w-full py-4 bg-[#FF6A1A] hover:bg-orange-500 text-black font-semibold rounded-2xl text-center text-lg shadow-lg active:scale-[0.97] transition-all">
           Pay £10 now
         </a>
       </div>
     </div>
 
-    <!-- Other Options - Smaller & Horizontal Scroll or Stacked -->
+    <!-- Economy & Deluxe -->
     <div class="grid grid-cols-2 gap-4">
       <!-- Economy -->
       <div class="bg-zinc-900/90 rounded-3xl p-5 border border-zinc-700">
-        <div class="text-[#FF6A1A] text-sm font-medium">ECONOMY</div>
-        <div class="text-4xl font-bold mt-1">£5</div>
+        <div class="text-[#FF6A1A] text-xs font-medium tracking-widest">ECONOMY</div>
+        <div class="text-4xl font-bold mt-2">£5</div>
         <div class="text-xs text-zinc-400 mt-1">5 Mbps • 20 min</div>
         
         <a href="YOUR_ECONOMY_STRIPE_LINK" target="_blank"
-           class="mt-6 block w-full py-3 bg-white text-black text-sm font-medium rounded-2xl text-center active:scale-95">
+           class="mt-8 block w-full py-3 bg-white text-black text-sm font-medium rounded-2xl text-center active:scale-95 transition">
           Pay £5
         </a>
       </div>
 
       <!-- Deluxe -->
       <div class="bg-zinc-900/90 rounded-3xl p-5 border border-zinc-700">
-        <div class="text-[#FF6A1A] text-sm font-medium">DELUXE</div>
-        <div class="text-4xl font-bold mt-1">£20</div>
+        <div class="text-[#FF6A1A] text-xs font-medium tracking-widest">DELUXE</div>
+        <div class="text-4xl font-bold mt-2">£20</div>
         <div class="text-xs text-zinc-400 mt-1">25 Mbps • 20 min</div>
         
         <a href="YOUR_DELUXE_STRIPE_LINK" target="_blank"
-           class="mt-6 block w-full py-3 bg-white text-black text-sm font-medium rounded-2xl text-center active:scale-95">
+           class="mt-8 block w-full py-3 bg-white text-black text-sm font-medium rounded-2xl text-center active:scale-95 transition">
           Pay £20
         </a>
       </div>
     </div>
 
-    <!-- Footer -->
     <p class="text-center text-zinc-500 text-xs mt-12">
       © SOS WiFi • Powered By 100% Renewable Energy
     </p>
