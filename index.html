@@ -27,25 +27,28 @@
 <body class="text-white min-h-screen">
   <div class="max-w-lg mx-auto px-5 pt-6 pb-12">
 
-    <!-- Logo + Hero (unchanged) -->
+    <!-- Logo -->
     <div class="flex justify-center mb-6">
       <img src="SOS-Wi-Fi-png.png" alt="SOS WiFi Logo" class="h-20 w-auto drop-shadow-2xl">
     </div>
 
+    <!-- Hero -->
     <div class="text-center mb-10">
       <p class="lifeline font-semibold tracking-[3px] text-xl mb-3">
         YOUR INTERNET LIFELINE
       </p>
+      
       <h1 class="text-5xl font-bold tracking-tighter leading-none mb-6">
         20 minutes of<br>fast WiFi
       </h1>
+
       <div class="inline-flex items-center gap-2 text-zinc-400 text-sm font-medium">
         <span class="text-lg">☀️</span>
         Powered by Sunshine (Starlink)
       </div>
     </div>
 
-    <!-- Cards -->
+    <!-- Pricing Cards -->
     <div class="space-y-8">
 
       <!-- Gold -->
@@ -60,8 +63,8 @@
           <div class="text-zinc-400 text-lg">15 Mbps • 20 minutes</div>
         </div>
 
-        <div class="flex gap-6 items-start">
-          <!-- Features -->
+        <div class="flex gap-6">
+          <!-- Left: Features -->
           <div class="flex-1">
             <ul class="space-y-3 text-zinc-200 text-[15.5px]">
               <li class="flex items-start gap-3"><span class="text-[#FF6A1A] mt-0.5 text-xl">✔</span> Streaming & video calls</li>
@@ -70,15 +73,24 @@
             </ul>
           </div>
 
-          <!-- Payment Icons with subtle light panel -->
+          <!-- Right: Payment Icons + Trust -->
           <div class="w-24 flex-shrink-0">
-            <div class="bg-zinc-800/70 rounded-2xl p-3">
+            <div class="bg-zinc-800/70 rounded-2xl p-3 mb-4">
               <div class="grid grid-cols-2 gap-3 text-3xl text-zinc-300">
                 <i class="fa-brands fa-cc-visa"></i>
                 <i class="fa-brands fa-cc-mastercard"></i>
                 <i class="fa-brands fa-apple-pay"></i>
                 <i class="fa-brands fa-google-pay"></i>
               </div>
+            </div>
+            
+            <!-- Trust / Secure -->
+            <div class="text-center">
+              <div class="flex items-center justify-center gap-1.5 text-[10px] text-zinc-500">
+                <i class="fa-solid fa-lock text-[#FF6A1A]"></i>
+                <span class="font-medium">Secure checkout</span>
+              </div>
+              <div class="text-[10px] text-zinc-500 mt-0.5">via Stripe</div>
             </div>
           </div>
         </div>
@@ -89,8 +101,87 @@
         </a>
       </div>
 
-      <!-- Economy & Deluxe follow the same pattern (shorter features) -->
-      <!-- ... (same structure as Gold, just change title, price, speed, and feature list) ... -->
+      <!-- Economy -->
+      <div class="bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-8 border border-zinc-700">
+        <div class="text-center mb-8">
+          <div class="text-[#FF6A1A] font-semibold tracking-widest text-sm mb-1">ECONOMY</div>
+          <div class="text-6xl font-bold text-white mb-1">£5</div>
+          <div class="text-zinc-400">5 Mbps • 20 minutes</div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-1">
+            <ul class="space-y-3 text-zinc-200 text-[15.5px]">
+              <li class="flex items-start gap-3"><span class="text-[#FF6A1A] mt-0.5 text-xl">✔</span> Browsing & social media</li>
+              <li class="flex items-start gap-3"><span class="text-[#FF6A1A] mt-0.5 text-xl">✔</span> WhatsApp, Instagram, TikTok</li>
+            </ul>
+          </div>
+
+          <div class="w-24 flex-shrink-0">
+            <div class="bg-zinc-800/70 rounded-2xl p-3 mb-4">
+              <div class="grid grid-cols-2 gap-3 text-3xl text-zinc-300">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-apple-pay"></i>
+                <i class="fa-brands fa-google-pay"></i>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="flex items-center justify-center gap-1.5 text-[10px] text-zinc-500">
+                <i class="fa-solid fa-lock text-[#FF6A1A]"></i>
+                <span class="font-medium">Secure checkout</span>
+              </div>
+              <div class="text-[10px] text-zinc-500 mt-0.5">via Stripe</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="YOUR_ECONOMY_STRIPE_LINK" target="_blank"
+           class="mt-10 block w-full py-4 bg-white hover:bg-zinc-100 text-black font-semibold rounded-2xl text-center">
+          Pay £5 now
+        </a>
+      </div>
+
+      <!-- Deluxe -->
+      <div class="bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-8 border border-zinc-700">
+        <div class="text-center mb-8">
+          <div class="text-[#FF6A1A] font-semibold tracking-widest text-sm mb-1">DELUXE</div>
+          <div class="text-6xl font-bold text-white mb-1">£20</div>
+          <div class="text-zinc-400">25 Mbps • 20 minutes</div>
+        </div>
+
+        <div class="flex gap-6">
+          <div class="flex-1">
+            <ul class="space-y-3 text-zinc-200 text-[15.5px]">
+              <li class="flex items-start gap-3"><span class="text-[#FF6A1A] mt-0.5 text-xl">✔</span> Ultra-fast 4K & uploads</li>
+              <li class="flex items-start gap-3"><span class="text-[#FF6A1A] mt-0.5 text-xl">✔</span> Best for busy events</li>
+            </ul>
+          </div>
+
+          <div class="w-24 flex-shrink-0">
+            <div class="bg-zinc-800/70 rounded-2xl p-3 mb-4">
+              <div class="grid grid-cols-2 gap-3 text-3xl text-zinc-300">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-apple-pay"></i>
+                <i class="fa-brands fa-google-pay"></i>
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="flex items-center justify-center gap-1.5 text-[10px] text-zinc-500">
+                <i class="fa-solid fa-lock text-[#FF6A1A]"></i>
+                <span class="font-medium">Secure checkout</span>
+              </div>
+              <div class="text-[10px] text-zinc-500 mt-0.5">via Stripe</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="YOUR_DELUXE_STRIPE_LINK" target="_blank"
+           class="mt-10 block w-full py-4 bg-white hover:bg-zinc-100 text-black font-semibold rounded-2xl text-center">
+          Pay £20 now
+        </a>
+      </div>
 
     </div>
 
