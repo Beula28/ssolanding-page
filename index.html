@@ -26,22 +26,15 @@
       color: #FF6A1A;
     }
 
-    /* Soft Golden Touch for Gold Card */
+    /* Soft Golden Touch */
     .gold-card {
       border-color: #FF6A1A;
-      box-shadow: 
-        0 0 0 3px rgba(251, 191, 36, 0.18),
-        0 20px 25px -5px rgba(251, 191, 36, 0.1);
+      box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.18);
     }
     
     .gold-badge {
       background: linear-gradient(to right, #FF6A1A, #FBBF24);
       color: #111827;
-      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
-    }
-
-    .gold-text {
-      color: #FBBF24;
     }
   </style>
 </head>
@@ -59,7 +52,6 @@
       <p class="lifeline font-semibold tracking-[3px] text-xl mb-4">
         YOUR INTERNET LIFELINE
       </p>
-      
       <div class="inline-flex items-center gap-3 text-zinc-400 text-base font-medium">
         <span class="text-2xl">☀️</span>
         <span>Powered by Sunshine</span>
@@ -70,7 +62,7 @@
     <!-- Pricing Cards -->
     <div class="space-y-8">
 
-      <!-- Gold - Soft Golden Premium Look -->
+      <!-- Gold -->
       <div class="gold-card relative bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-8 border-2 ring-1 ring-amber-400/30">
         <div class="gold-badge absolute -top-4 left-1/2 -translate-x-1/2 text-xs font-bold px-8 py-1.5 rounded-3xl shadow-xl">
           MOST POPULAR
@@ -83,25 +75,14 @@
         </div>
 
         <div class="flex gap-6">
-          <!-- Features -->
           <div class="flex-1">
             <ul class="space-y-4 text-zinc-200 text-[15.5px]">
-              <li class="flex items-start gap-3">
-                <span class="tick mt-0.5 text-2xl leading-none">✔</span> 
-                <span>Streaming & video calls</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="tick mt-0.5 text-2xl leading-none">✔</span> 
-                <span>YouTube, live streams</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="tick mt-0.5 text-2xl leading-none">✔</span> 
-                <span>Multiple devices</span>
-              </li>
+              <li class="flex items-start gap-3"><span class="tick mt-0.5 text-2xl leading-none">✔</span> Streaming & video calls</li>
+              <li class="flex items-start gap-3"><span class="tick mt-0.5 text-2xl leading-none">✔</span> YouTube, live streams</li>
+              <li class="flex items-start gap-3"><span class="tick mt-0.5 text-2xl leading-none">✔</span> Multiple devices</li>
             </ul>
           </div>
 
-          <!-- Payment Icons + Trust -->
           <div class="w-24 flex-shrink-0">
             <div class="bg-zinc-800/70 rounded-2xl p-3 mb-4">
               <div class="grid grid-cols-2 gap-3 text-3xl text-zinc-300">
@@ -111,7 +92,6 @@
                 <i class="fa-brands fa-google-pay"></i>
               </div>
             </div>
-            
             <div class="text-center">
               <div class="flex items-center justify-center gap-1.5 text-[10px] text-zinc-500">
                 <i class="fa-solid fa-lock text-[#FF6A1A]"></i>
@@ -122,9 +102,11 @@
           </div>
         </div>
 
+        <!-- Subtle Pay Button -->
         <a href="YOUR_GOLD_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-[#FF6A1A] hover:bg-orange-500 text-black font-semibold rounded-2xl text-center text-lg shadow-lg active:scale-[0.97]">
-          Pay £10 now
+           class="mt-10 flex items-center justify-center gap-2 w-full py-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-600 text-white font-semibold rounded-2xl text-center transition-all active:scale-[0.98]">
+          <i class="fa-solid fa-lock text-[#FF6A1A]"></i>
+          <span>Pay £10 now • Secure</span>
         </a>
       </div>
 
@@ -164,8 +146,9 @@
         </div>
 
         <a href="YOUR_ECONOMY_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-white hover:bg-zinc-100 text-black font-semibold rounded-2xl text-center">
-          Pay £5 now
+           class="mt-10 flex items-center justify-center gap-2 w-full py-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-600 text-white font-semibold rounded-2xl text-center transition-all active:scale-[0.98]">
+          <i class="fa-solid fa-lock text-[#FF6A1A]"></i>
+          <span>Pay £5 now • Secure</span>
         </a>
       </div>
 
@@ -205,8 +188,9 @@
         </div>
 
         <a href="YOUR_DELUXE_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-white hover:bg-zinc-100 text-black font-semibold rounded-2xl text-center">
-          Pay £20 now
+           class="mt-10 flex items-center justify-center gap-2 w-full py-4 bg-zinc-800 hover:bg-zinc-700 border border-zinc-600 text-white font-semibold rounded-2xl text-center transition-all active:scale-[0.98]">
+          <i class="fa-solid fa-lock text-[#FF6A1A]"></i>
+          <span>Pay £20 now • Secure</span>
         </a>
       </div>
 
