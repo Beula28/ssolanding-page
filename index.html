@@ -26,17 +26,22 @@
       color: #FF6A1A;
     }
 
-    /* Golden Gold Card */
+    /* Soft Golden Touch for Gold Card */
     .gold-card {
-      border-color: #F5B800;
-      box-shadow: 0 0 0 3px rgba(245, 184, 0, 0.25),
-                  0 25px 50px -12px rgba(245, 184, 0, 0.15);
+      border-color: #FF6A1A;
+      box-shadow: 
+        0 0 0 3px rgba(251, 191, 36, 0.18),
+        0 20px 25px -5px rgba(251, 191, 36, 0.1);
     }
     
     .gold-badge {
-      background: linear-gradient(135deg, #F5B800, #FFEA80);
-      color: #1F1F1F;
-      box-shadow: 0 4px 15px rgba(245, 184, 0, 0.4);
+      background: linear-gradient(to right, #FF6A1A, #FBBF24);
+      color: #111827;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+    }
+
+    .gold-text {
+      color: #FBBF24;
     }
   </style>
 </head>
@@ -65,20 +70,20 @@
     <!-- Pricing Cards -->
     <div class="space-y-8">
 
-      <!-- Gold - Now Golden & Premium -->
-      <div class="gold-card relative bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-8 border-2 ring-2 ring-[#F5B800]/30">
+      <!-- Gold - Soft Golden Premium Look -->
+      <div class="gold-card relative bg-zinc-900/95 backdrop-blur-xl rounded-3xl p-8 border-2 ring-1 ring-amber-400/30">
         <div class="gold-badge absolute -top-4 left-1/2 -translate-x-1/2 text-xs font-bold px-8 py-1.5 rounded-3xl shadow-xl">
           MOST POPULAR
         </div>
 
         <div class="text-center mb-8">
-          <div class="text-[#F5B800] font-semibold tracking-widest text-sm mb-1">GOLD</div>
+          <div class="gold-text font-semibold tracking-widest text-sm mb-1">GOLD</div>
           <div class="text-7xl font-bold text-white mb-1">£10</div>
           <div class="text-zinc-400 text-lg">15 Mbps • 20 minutes</div>
         </div>
 
         <div class="flex gap-6">
-          <!-- Left: Features -->
+          <!-- Features -->
           <div class="flex-1">
             <ul class="space-y-4 text-zinc-200 text-[15.5px]">
               <li class="flex items-start gap-3">
@@ -96,7 +101,7 @@
             </ul>
           </div>
 
-          <!-- Right: Payment Icons + Trust -->
+          <!-- Payment Icons + Trust -->
           <div class="w-24 flex-shrink-0">
             <div class="bg-zinc-800/70 rounded-2xl p-3 mb-4">
               <div class="grid grid-cols-2 gap-3 text-3xl text-zinc-300">
@@ -118,7 +123,7 @@
         </div>
 
         <a href="YOUR_GOLD_STRIPE_LINK" target="_blank"
-           class="mt-10 block w-full py-4 bg-[#F5B800] hover:bg-[#FFEA80] text-black font-semibold rounded-2xl text-center text-lg shadow-lg active:scale-[0.97]">
+           class="mt-10 block w-full py-4 bg-[#FF6A1A] hover:bg-orange-500 text-black font-semibold rounded-2xl text-center text-lg shadow-lg active:scale-[0.97]">
           Pay £10 now
         </a>
       </div>
@@ -134,14 +139,8 @@
         <div class="flex gap-6">
           <div class="flex-1">
             <ul class="space-y-4 text-zinc-200 text-[15.5px]">
-              <li class="flex items-start gap-3">
-                <span class="tick mt-0.5 text-2xl leading-none">✔</span> 
-                <span>Browsing & social media</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="tick mt-0.5 text-2xl leading-none">✔</span> 
-                <span>WhatsApp, Instagram, TikTok</span>
-              </li>
+              <li class="flex items-start gap-3"><span class="tick mt-0.5 text-2xl leading-none">✔</span> Browsing & social media</li>
+              <li class="flex items-start gap-3"><span class="tick mt-0.5 text-2xl leading-none">✔</span> WhatsApp, Instagram, TikTok</li>
             </ul>
           </div>
 
@@ -181,14 +180,8 @@
         <div class="flex gap-6">
           <div class="flex-1">
             <ul class="space-y-4 text-zinc-200 text-[15.5px]">
-              <li class="flex items-start gap-3">
-                <span class="tick mt-0.5 text-2xl leading-none">✔</span> 
-                <span>Ultra-fast 4K & uploads</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span class="tick mt-0.5 text-2xl leading-none">✔</span> 
-                <span>Best for busy events</span>
-              </li>
+              <li class="flex items-start gap-3"><span class="tick mt-0.5 text-2xl leading-none">✔</span> Ultra-fast 4K & uploads</li>
+              <li class="flex items-start gap-3"><span class="tick mt-0.5 text-2xl leading-none">✔</span> Best for busy events</li>
             </ul>
           </div>
 
