@@ -1,3 +1,7 @@
-export default function handler(req, res) {
-  res.status(200).json({ ok: true, route: "test" });
+export default {
+  fetch(request) {
+    return new Response(JSON.stringify({ ok: true, route: "test" }), {
+      headers: { "content-type": "application/json" }
+    });
+  }
 }
