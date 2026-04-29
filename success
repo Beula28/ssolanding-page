@@ -67,7 +67,19 @@
       If the connection doesn’t work immediately, try opening a new tab or refreshing once.
     </div>
   </div>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const session_id = urlParams.get("session_id");
 
+if (session_id) {
+  fetch(`/api/verify-session?session_id=${session_id}`)
+    .then(res => res.json())
+    .then(data => {
+      console.log("Payment verified", data);
+    })
+    .catch(err => console.error(err));
+}
+</script>
 </body>
 </html>
 ``
