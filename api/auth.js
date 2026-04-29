@@ -1,11 +1,11 @@
-export default async function handler(req, res) {
-  // openNDS sends GET requests, not POST
-  const mac = req.query.mac;
+let paidUsers = {};
 
-  if (!mac) {
-    return res.status(200).send("Auth: 0");
+export default function handler(req, res) {
+  const ip = req.query.ip;
+
+  if (paidUsers[ip]) {
+    return res.status(200).send("Auth: 1");
   }
 
-  // TEMP: allow all users (Stripe later)
-  return res.status(200).send("Auth: 1");
+  return res.status(200).send("Auth: 0");
 }
